@@ -35,4 +35,8 @@ public class _01_test_case extends TestBaseClass {
     //17. Click 'Delete Account' button
     //18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
 
+    public static void main(String[] args) {
+        System.out.println("Ben suanda mainde degisiklik yapiyorum");
+
+    }
 }
