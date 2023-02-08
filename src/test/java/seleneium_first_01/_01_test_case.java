@@ -1,6 +1,19 @@
 package seleneium_first_01;
 
-public class _01_test_case {
+import org.junit.Test;
+import utilities.TestBaseClass;
+
+public class _01_test_case extends TestBaseClass {
+
+    @Test
+
+    public void test01() {
+
+
+
+    }
+
+
 
 
     // 1. Launch browser
