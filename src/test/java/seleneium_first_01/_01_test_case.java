@@ -5,10 +5,6 @@ import utilities.TestBaseClass;
 
 public class _01_test_case extends TestBaseClass {
 
-
-        // deneme yapiyorum
-
-
         // 1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
         //3. Verify that home page is visible successfully
