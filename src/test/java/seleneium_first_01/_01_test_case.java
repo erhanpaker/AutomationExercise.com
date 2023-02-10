@@ -1,12 +1,28 @@
 package seleneium_first_01;
 
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 import utilities.TestBaseClass;
+import utilities.TestBaseMethod;
 
-public class _01_test_case extends TestBaseClass {
+public class _01_test_case extends TestBaseMethod {
 
         // 1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
+
+
+         @Test
+
+    public void test1 (){
+
+
+            driver.get("http://automationexercise.com");
+
+
+         }
+
+
+
         //3. Verify that home page is visible successfully
         //4. Click on 'Signup / Login' button
         //5. Verify 'New User Signup!' is visible
