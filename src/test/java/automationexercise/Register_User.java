@@ -2,6 +2,8 @@ package automationexercise;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import utilities.TestBaseMethod;
 
 public class Register_User extends TestBaseMethod {
@@ -10,7 +12,7 @@ public class Register_User extends TestBaseMethod {
     //2. Navigate to url 'http://automationexercise.com'
     @Test
 
-    public void test1 (){
+    public void sayfayaGit (){
         driver.get("http://automationexercise.com");
 
 
@@ -25,6 +27,14 @@ public class Register_User extends TestBaseMethod {
 
         String  actualUrl = driver.getCurrentUrl();
         Assert.assertFalse(actualUrl.contains(expectedTitle));
+    }
+
+    @Test
+
+    public void signupLogin(){
+
+        WebElement login = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a"));
+        login.click();
     }
 
 
