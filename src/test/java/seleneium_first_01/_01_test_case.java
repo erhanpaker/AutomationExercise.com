@@ -1,7 +1,10 @@
 package seleneium_first_01;
 
+import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import utilities.TestBaseClass;
 import utilities.TestBaseMethod;
 
@@ -9,21 +12,26 @@ public class _01_test_case extends TestBaseMethod {
 
         // 1. Launch browser
         //2. Navigate to url 'http://automationexercise.com'
-
-
-         @Test
+        @Test
 
     public void test1 (){
-
-
             driver.get("http://automationexercise.com");
 
+
+         }
+    //3. Verify that home page is visible successfully
+         @Test
+
+           public void websitesineGittiğiniTesEt(){
+
+            WebElement  logoElementi= driver.findElement(By.xpath("//img[@src='/static/images/home/logo.png']"));
+            Assert.assertTrue(logoElementi.isDisplayed());
 
          }
 
 
 
-        //3. Verify that home page is visible successfully
+
         //4. Click on 'Signup / Login' button
         //5. Verify 'New User Signup!' is visible
         //6. Enter name and email address
