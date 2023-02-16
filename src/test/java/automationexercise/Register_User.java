@@ -21,7 +21,7 @@ public class Register_User extends TestBaseMethod {
     //3. Verify that home page is visible successfully
     @Test
 
-    public void görünürOlduğumuTestEtme(){
+    public void görünürOlduğumuTestEt(){
 
         String expectedTitle="automationexercise";
 
@@ -30,9 +30,10 @@ public class Register_User extends TestBaseMethod {
     }
 
     @Test
+    //4. Click on 'Signup / Login' button
 
     public void signupLogin(){
-
+        driver.get("http://automationexercise.com");
         WebElement login = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a"));
         login.click();
     }
@@ -40,7 +41,6 @@ public class Register_User extends TestBaseMethod {
 
 
 
-    //4. Click on 'Signup / Login' button
     //5. Verify 'New User Signup!' is visible
     //6. Enter name and email address
     //7. Click 'Signup' button
