@@ -37,15 +37,16 @@ public class Register_User extends TestBaseMethod {
         WebElement login = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a"));
         login.click();
 
-
-        //5. Verify 'New User Signup!' is visible
-
         WebElement yaziElementi = driver.findElement(By.xpath("//h2[text()='New User Signup!']"));
 
         String expectedYazi = "New User Signup!";
         String actualYazi = yaziElementi.getText();
         Assert.assertEquals(expectedYazi,actualYazi);
+
+
+
     }
+
 
 
 
