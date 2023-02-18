@@ -41,9 +41,17 @@ public class Register_User extends TestBaseMethod {
         WebElement pass = driver.findElement(By.xpath("//input[@name ='password' and @data-qa = 'login-password']"));
         pass.sendKeys("Beyza123."); // email ve password alanlarına bilgileri gönderdim
 
-        //7. Click 'Signup' button
+        //7- Click 'Signup' button
         WebElement loginButon = driver.findElement(By.xpath("//*[@data-qa='login-button']"));
-         loginButon.click();
+        loginButon.click();
+
+        //8- Verify that 'ENTER ACCOUNT INFORMATION' is visible
+        String expectedTitle="Logged in as";
+        String  actualUrl = driver.getCurrentUrl();
+        Assert.assertFalse(actualUrl.contains(expectedTitle));
+
+        //9- Fill details: Title, Name, Email, Password, Date of birth
+
 
 
 
@@ -54,9 +62,8 @@ public class Register_User extends TestBaseMethod {
 
         
 
-    //7. Click 'Signup' button
-    //8. Verify that 'ENTER ACCOUNT INFORMATION' is visible
-    //9. Fill details: Title, Name, Email, Password, Date of birth
+
+
     //10. Select checkbox 'Sign up for our newsletter!'
     //11. Select checkbox 'Receive special offers from our partners!'
     //12. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
