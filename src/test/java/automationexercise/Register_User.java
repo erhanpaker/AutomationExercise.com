@@ -12,7 +12,7 @@ public class Register_User extends TestBaseMethod {
 
     @Test
 
-    public void AutomationExercise (){
+    public void AutomationExercise () throws InterruptedException {
 
         //2- Navigate to url 'http://automationexercise.com'
         driver.get("http://automationexercise.com");
@@ -32,12 +32,22 @@ public class Register_User extends TestBaseMethod {
         String actualYazi = yaziElementi.getText();
         Assert.assertEquals(expectedYazi,actualYazi);
 
+        Thread.sleep(1000);
+
 
         //6- Enter name and email address
         WebElement email = driver.findElement(By.xpath("//input[@name ='email' and @data-qa = 'login-email']"));
         email.sendKeys("beyzakurnaz57@hotmail.com");
         WebElement pass = driver.findElement(By.xpath("//input[@name ='password' and @data-qa = 'login-password']"));
-        pass.sendKeys("Beyza123.");
+        pass.sendKeys("Beyza123."); // email ve password alanlarına bilgileri gönderdim
+
+        //7. Click 'Signup' button
+        WebElement loginButon = driver.findElement(By.xpath("//*[@data-qa='login-button']"));
+         loginButon.click();
+
+
+
+
     }
 
 
