@@ -26,7 +26,10 @@ public class TestBaseMethod {
     }
 
     @After
-    public void teardown(){driver.quit();}
+    public void teardown(){
+
+       // driver.quit();
+    }
 
 
 }

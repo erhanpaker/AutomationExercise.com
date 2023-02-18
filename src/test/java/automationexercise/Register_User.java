@@ -36,17 +36,17 @@ public class Register_User extends TestBaseMethod {
 
 
         //6- Enter name and email address
-        WebElement email = driver.findElement(By.xpath("//input[@name ='email' and @data-qa = 'login-email']"));
-        email.sendKeys("beyzakurnaz57@hotmail.com");
-        WebElement pass = driver.findElement(By.xpath("//input[@name ='password' and @data-qa = 'login-password']"));
-        pass.sendKeys("Beyza123."); // email ve password alanlarına bilgileri gönderdim
+        WebElement email = driver.findElement(By.xpath("//input[@data-qa='signup-name']"));
+        email.sendKeys("erhan");
+        WebElement pass = driver.findElement(By.xpath("//input[@data-qa='signup-email']"));
+        pass.sendKeys("metehan0077@gmail.com"); // email ve password alanlarına bilgileri gönderdim
 
         //7- Click 'Signup' button
-        WebElement loginButon = driver.findElement(By.xpath("//*[@data-qa='login-button']"));
-        loginButon.click();
+        WebElement signupButon = driver.findElement(By.xpath("//button[@data-qa='signup-button']"));
+        signupButon.click();
 
         //8- Verify that 'ENTER ACCOUNT INFORMATION' is visible
-        String expectedTitle="Logged in as";
+        String expectedTitle="ENTER ACCOUNT INFORMATION";
         String  actualUrl = driver.getCurrentUrl();
         Assert.assertFalse(actualUrl.contains(expectedTitle));
 
