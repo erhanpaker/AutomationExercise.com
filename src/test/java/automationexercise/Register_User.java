@@ -8,35 +8,24 @@ import utilities.TestBaseMethod;
 
 public class Register_User extends TestBaseMethod {
 
-    // 1. Launch browser
-    //2. Navigate to url 'http://automationexercise.com'
+       //1- Launch browser
+
     @Test
 
-    public void sayfayaGit (){
+    public void AutomationExercise (){
+
+        //2- Navigate to url 'http://automationexercise.com'
         driver.get("http://automationexercise.com");
 
+        WebElement logoElement = driver.findElement(By.xpath("//img[@src = '/static/images/home/logo.png']"));
+        Assert.assertTrue(logoElement.isDisplayed()); //Logo elementinin göründüğünü kontrol eder.
 
 
-    }
-    //3. Verify that home page is visible successfully
-    @Test
-
-    public void görünürOlduğumuTestEt(){
-
-        String expectedTitle="automationexercise";
-
-        String  actualUrl = driver.getCurrentUrl();
-        Assert.assertFalse(actualUrl.contains(expectedTitle));
-    }
-
-    @Test
-    //4. Click on 'Signup / Login' button
-
-    public void signupLogin(){
-        driver.get("http://automationexercise.com");
-        WebElement login = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a"));
+        //4- Click on 'Signup / Login' button
+        WebElement login = driver.findElement(By.xpath("//*[text()= ' Signup / Login']"));
         login.click();
 
+        //5-  Verify 'New User Signup!' is visible
         WebElement yaziElementi = driver.findElement(By.xpath("//h2[text()='New User Signup!']"));
 
         String expectedYazi = "New User Signup!";
@@ -44,15 +33,17 @@ public class Register_User extends TestBaseMethod {
         Assert.assertEquals(expectedYazi,actualYazi);
 
 
-
+        //6- Enter name and email address
+        WebElement email = driver.findElement(By.xpath("//input[@name ='email' and @data-qa = 'login-email']"));
+        email.sendKeys("beyzakurnaz57@hotmail.com");
+        WebElement pass = driver.findElement(By.xpath("//input[@name ='password' and @data-qa = 'login-password']"));
+        pass.sendKeys("Beyza123.");
     }
 
 
 
+        
 
-
-
-    //6. Enter name and email address
     //7. Click 'Signup' button
     //8. Verify that 'ENTER ACCOUNT INFORMATION' is visible
     //9. Fill details: Title, Name, Email, Password, Date of birth
