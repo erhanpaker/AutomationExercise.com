@@ -3,7 +3,9 @@ package automationexercise;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import utilities.TestBaseMethod;
 
 public class Register_User extends TestBaseMethod {
@@ -51,7 +53,16 @@ public class Register_User extends TestBaseMethod {
         Assert.assertFalse(actualUrl.contains(expectedTitle));
 
         //9- Fill details: Title, Name, Email, Password, Date of birth
-
+        WebElement title = driver.findElement(By.xpath(" (//input[@type='radio'])[1]"));
+        title.click();
+        Actions actions = new Actions(driver);
+        actions.click(title)
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)
+                .sendKeys("1990")
+                .sendKeys(Keys.ENTER);
 
 
 
