@@ -64,6 +64,8 @@ public class Register_User extends TestBaseMethod {
                 .sendKeys("1990")
                 .sendKeys(Keys.ENTER);
 
+        //form alanını geçemiyorum
+
 
 
 
