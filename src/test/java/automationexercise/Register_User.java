@@ -38,10 +38,10 @@ public class Register_User extends TestBaseMethod {
 
 
         //6- Enter name and email address
-        WebElement email = driver.findElement(By.xpath("//input[@data-qa='signup-name']"));
-        email.sendKeys("erhan");
-        WebElement pass = driver.findElement(By.xpath("//input[@data-qa='signup-email']"));
-        pass.sendKeys("metehan0077@gmail.com"); // email ve password alanlarına bilgileri gönderdim
+        WebElement name = driver.findElement(By.xpath("//input[@data-qa='signup-name']"));
+        name.sendKeys("erhan");
+        WebElement email = driver.findElement(By.xpath("//input[@data-qa='signup-email']"));
+        email.sendKeys("metehan0077@gmail.com"); // email ve password alanlarına bilgileri gönderdim
 
         //7- Click 'Signup' button
         WebElement signupButon = driver.findElement(By.xpath("//button[@data-qa='signup-button']"));
@@ -64,7 +64,7 @@ public class Register_User extends TestBaseMethod {
                 .sendKeys("1990")
                 .sendKeys(Keys.ENTER);
 
-        //form alanını geçemiyorum
+        //form alanını geçemiyorum nevzat hocam
 
 
 
