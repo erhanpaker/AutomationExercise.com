@@ -59,10 +59,7 @@ public class Register_User extends TestBaseMethod {
         actions.click(title)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
-                .sendKeys(Keys.TAB)
-                .sendKeys(Keys.TAB)
                 .sendKeys("1990")
-                .sendKeys(Keys.TAB)
                 .sendKeys(Keys.ENTER).perform();
 
         //form alanını geçemiyorum nevzat hocam
