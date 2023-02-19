@@ -60,7 +60,18 @@ public class Register_User extends TestBaseMethod {
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys("1990")
-                .sendKeys(Keys.ENTER).perform();
+                .sendKeys(Keys.ENTER)
+                .sendKeys("erhan")
+                .sendKeys(Keys.TAB)
+                .sendKeys("paker")
+                .sendKeys(Keys.TAB)
+                .sendKeys("developer")
+                .sendKeys(Keys.TAB)
+                .sendKeys("İSTANBUL")
+                .sendKeys(Keys.TAB)
+                .sendKeys("karşıyaka").perform();
+
+
 
 
 
