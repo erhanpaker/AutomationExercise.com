@@ -60,7 +60,9 @@ public class Register_User extends TestBaseMethod {
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys("1990")
-                .sendKeys(Keys.ENTER)
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)
                 .sendKeys("erhan")
                 .sendKeys(Keys.TAB)
                 .sendKeys("paker")
@@ -69,7 +71,9 @@ public class Register_User extends TestBaseMethod {
                 .sendKeys(Keys.TAB)
                 .sendKeys("İSTANBUL")
                 .sendKeys(Keys.TAB)
-                .sendKeys("karşıyaka").perform();
+                .sendKeys("karşıyaka")
+                .sendKeys(Keys.TAB).perform();
+
 
 
 
@@ -86,7 +90,7 @@ public class Register_User extends TestBaseMethod {
 
 
 
-    //10. Select checkbox 'Sign up for our newsletter!'
+
     //11. Select checkbox 'Receive special offers from our partners!'
     //12. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
     //13. Click 'Create Account button'
