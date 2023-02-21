@@ -32,10 +32,10 @@ public class Login_User_with_correct_email extends TestBaseMethod {
 
         //6. Enter correct email address and password
         WebElement mailKutusu = driver.findElement(By.xpath("//input[@data-qa='login-email']"));
-        mailKutusu.sendKeys("beyzakurnaz57@hotmail.com");
+        mailKutusu.sendKeys("metehan0077@gmail.com");
 
         WebElement parolaKutusu = driver.findElement(By.xpath("//input[@data-qa='login-password']"));
-        parolaKutusu.sendKeys("Beyza123.");
+        parolaKutusu.sendKeys("12345");
 
         //7. Click 'login' button
         WebElement clicButon = driver.findElement(By.xpath("//button[@data-qa='login-button']"));
@@ -45,8 +45,11 @@ public class Login_User_with_correct_email extends TestBaseMethod {
         WebElement beyza  = driver.findElement(By.xpath("//b[text()='beyzanur']"));
         Assert.assertTrue(beyza.isDisplayed());
 
-
         //9. Click 'Delete Account' button
+        WebElement deleteButonu = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a"));
+        deleteButonu.click();
+
+
         //10. Verify that 'ACCOUNT DELETED!' is visible
 
 
