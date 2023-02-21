@@ -19,6 +19,8 @@ public class Register_User extends TestBaseMethod {
         //2- Navigate to url 'http://automationexercise.com'
         driver.get("http://automationexercise.com");
 
+        //3 Verify that home page is visible successfully
+
         WebElement logoElement = driver.findElement(By.xpath("//img[@src = '/static/images/home/logo.png']"));
         Assert.assertTrue(logoElement.isDisplayed()); //Logo elementinin göründüğünü kontrol eder.
 
