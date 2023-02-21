@@ -40,7 +40,12 @@ public class Login_User_with_correct_email extends TestBaseMethod {
         //7. Click 'login' button
         WebElement clicButon = driver.findElement(By.xpath("//button[@data-qa='login-button']"));
         clicButon.click();
+
         //8. Verify that 'Logged in as username' is visible
+        WebElement beyza  = driver.findElement(By.xpath("//b[text()='beyzanur']"));
+        Assert.assertTrue(beyza.isDisplayed());
+
+
         //9. Click 'Delete Account' button
         //10. Verify that 'ACCOUNT DELETED!' is visible
 
